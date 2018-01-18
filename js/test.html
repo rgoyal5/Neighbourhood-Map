@@ -1,0 +1,22 @@
+<html>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+<script >
+
+$.ajax(
+{
+url: 'https://api.foursquare.com/v2/venues/search',
+        dataType: 'json',
+        data: 'client_id=HC5OMTMT0H1EJMO02242A2HWBUU5FLUO4QIKQOMC23M5IFGQ&client_secret=EV2PKPWAJ1C1KQ3RKU22LHSZMGBCEBUGXEE54Z5KF4KIUCP2&v=20130815%20&query=hospital&ll=30.733315,76.730800&radius=12500&limit=5',
+        async: true
+
+}
+).done(
+(data)=>{
+console.log(data);
+}
+);
+</script>
+</html>

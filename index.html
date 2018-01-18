@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FootBall Stadium</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class row>
+            <div class="options-box col-md-3 col-sm-12">
+                <aside>
+                    <h1> Hospitals In Chandigarh</h1>
+                    <div class="error" data-bind="visible : Error , text : Error">
+                    </div>
+                    <h2 id="heading"> List of Hospitals </h2>
+                    <input id="search" type="search" placeholder="Search" data-bind="value: search, valueUpdate: 'keydown'">
+                    <ul class="stadiumList" data-bind="foreach : locationList">
+                            <li class="entries" data-bind="text : $data , click : open"></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+            <div id="map" class="col-md-9 col-sm-12"></div>
+		</div>
+    </div>
+    <footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script src="js/knockout-3.3.0.js"></script>
+        <script src="js/app.js"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEST0Ielnc_9k_RC0qYvCrE_A4XYj4jqk&callback=initMap" onerror="globeErr()">
+
+
+        </script>
+    </footer>
+</body>
+
+</html>
